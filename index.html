@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título y Metadatos (SEO) -->
+    <title>Voticky: Legal & Consulting | Asesoría Fintech, Legal y IA</title>
+    <meta name="description" content="Firma boutique dedicada a la asesoría legal-regulatoria y de negocios, enfocada en empresas Fintech y organizaciones innovadoras.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/logo-negro-sin-texto.png" type="image/png">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter (Fuente Secundaria del Manual de Marca) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Configuración de Tailwind para usar tu Identidad de Marca -->
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            // Usamos 'Inter' como la fuente principal del sitio.
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            // Paleta de colores de tu Manual de Marca
+            'brand': {
+              'midnight': '#014751', // Midnight Green (Primario)
+              'becker': '#50787A',   // Becker Blue (Secundario/Acentos)
+              'brook': '#BECFCD',    // Babbling Brook (Fondos Claros)
+            }
+          }
+        }
+      }
+    }
+    </script>
+</head>
+<body class="bg-white text-brand-becker font-sans antialiased">
+
+    <!-- ===== Header y Navegación ===== -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo (versión oscura, enlazada desde tu carpeta 'assets') -->
+                <a href="#" class="flex items-center space-x-3">
+                    <img class="h-16" src="assets/logo-negro-sin-texto.png" alt="Isotipo de Voticky Legal & Consulting">
+                    <img class="h-12" src="assets/texto-logo-negro.png" alt="Logotipo de Voticky Legal & Consulting">
+                </a>
+                
+                <!-- Menú de Navegación (Desktop) -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#servicios" class="text-brand-midnight font-medium hover:text-brand-becker transition-colors">Servicios</a>
+                    <a href="#fundador" class="text-brand-midnight font-medium hover:text-brand-becker transition-colors">Fundador</a>
+                    <a href="#experiencia" class="text-brand-midnight font-medium hover:text-brand-becker transition-colors">Experiencia</a>
+                    <a href="#contacto" class="bg-brand-becker text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-opacity-90 transition-colors shadow">
+                        Contactar
+                    </a>
+                </nav>
+
+                <!-- Botón Menú Móvil -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-brand-midnight">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Menú Desplegable Móvil -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg absolute top-20 left-0 w-full">
+            <a href="#servicios" class="block px-6 py-3 text-brand-midnight font-medium hover:bg-brand-brook/30">Servicios</a>
+            <a href="#fundador" class="block px-6 py-3 text-brand-midnight font-medium hover:bg-brand-brook/30">Fundador</a>
+            <a href="#experiencia" class="block px-6 py-3 text-brand-midnight font-medium hover:bg-brand-brook/30">Experiencia</a>
+            <a href="#contacto" class="block px-6 py-4 bg-brand-becker text-white text-center font-medium hover:bg-opacity-90">Contactar</a>
+        </div>
+    </header>
+
+    <!-- ===== Sección Principal (Hero) ===== -->
+    <main>
+        <section id="inicio" class="bg-brand-midnight text-white">
+            <div class="max-w-6xl mx-auto px-6 lg:px-8 py-28 md:py-40 text-center">
+                <!-- Título (Misión del Business Plan) -->
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                    Aliado estratégico en cumplimiento legal y gobierno corporativo.
+                </h1>
+                <!-- Subtítulo (Descripción del Negocio) -->
+                <p class="text-xl md:text-2xl text-brand-brook max-w-3xl mx-auto">
+                    Expertos en asesoría legal-regulatoria y de negocios para Fintech, con un enfoque en riesgos, cumplimiento e Inteligencia Artificial.
+                </p>
+                <a href="#servicios" class="mt-10 inline-block bg-brand-becker text-white px-8 py-3.5 rounded-lg text-lg font-medium hover:bg-opacity-90 transition-colors shadow-lg">
+                    Conocer los Servicios
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== Sección Servicios (del Business Plan) ===== -->
+        <section id="servicios" class="py-24 bg-brand-brook/20">
+            <div class="max-w-6xl mx-auto px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-4xl font-bold text-brand-midnight">Nuestras Líneas de Servicio</h2>
+                    <p class="text-lg text-brand-becker mt-4">
+                        Integramos experiencia legal, conocimiento de riesgo corporativo y tecnología (IA) para brindar soluciones completas.
+                    </p>
+                </div>
+                
+                <!-- Grid de 4 Servicios -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <!-- Tarjeta 1: Asesoría Legal-Regulatoria -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transform hover:scale-[1.03] transition-transform duration-300">
+                        <h3 class="text-2xl font-semibold text-brand-midnight mb-3">Asesoría Legal y Regulatoria</h3>
+                        <p class="text-base text-brand-becker leading-relaxed">
+                            Constitución de sociedades, registros y autorizaciones (Ley Fintech), redacción de términos y condiciones, políticas de privacidad y consultoría en cumplimiento normativo.
+                        </p>
+                    </div>
+
+                    <!-- Tarjeta 2: Riesgos y Cumplimiento (Advisory) -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transform hover:scale-[1.03] transition-transform duration-300">
+                        <h3 class="text-2xl font-semibold text-brand-midnight mb-3">Riesgos y Cumplimiento (Advisory)</h3>
+                        <p class="text-base text-brand-becker leading-relaxed">
+                            Diseño e implementación de modelos de gestión de riesgos operativos y regulatorios, gobierno corporativo y políticas internas (PLAFT, Ciberseguridad).
+                        </p>
+                    </div>
+
+                    <!-- Tarjeta 3: Auditoría Interna -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transform hover:scale-[1.03] transition-transform duration-300">
+                        <h3 class="text-2xl font-semibold text-brand-midnight mb-3">Auditoría Interna</h3>
+                        <p class="text-base text-brand-becker leading-relaxed">
+                            Servicios de auditoría interna tercerizada. Evaluaciones periódicas independientes de procesos clave, controles financieros y cumplimiento normativo.
+                        </p>
+                    </div>
+
+                    <!-- Tarjeta 4: Soluciones con IA -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transform hover:scale-[1.03] transition-transform duration-300">
+                        <h3 class="text-2xl font-semibold text-brand-midnight mb-3">Soluciones con Inteligencia Artificial (IA)</h3>
+                        <p class="text-base text-brand-becker leading-relaxed">
+                            Asesoría e implementación de herramientas de IA y automatización en áreas legales y de cumplimiento (Legaltech/Regtech) para optimizar procesos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Sección Fundador (Tu CV) ===== -->
+        <section id="fundador" class="py-24 bg-white">
+            <div class="max-w-6xl mx-auto px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+                    <!-- Imagen del Fundador -->
+                    <div class="md:col-span-1 flex justify-center">
+                        <img src="assets/foto-fundador.png" alt="Foto de Eugenio Voticky Sousa" class="rounded-lg shadow-xl w-64 h-64 md:w-80 md:h-80 object-cover">
+                    </div>
+                    <!-- Texto (Extracto de tu CV) -->
+                    <div class="md:col-span-2">
+                        <h2 class="text-4xl font-bold text-brand-midnight mb-4">Sobre el Fundador</h2>
+                        <h3 class="text-2xl font-semibold text-brand-becker mb-6">Eugenio Voticky Sousa</h3>
+                        <div class="space-y-4 text-lg text-brand-midnight/90 leading-relaxed">
+                            <p>
+                                Abogado de la Pontificia Universidad Católica de Chile con experiencia en firmas de primer nivel (Carey, CMS Carey & Allende, Honorato Delaveau).
+                            </Voticky>
+                            <p>
+                                Especializado en la convergencia del derecho, la tecnología financiera (Fintech), los criptoactivos y la inteligencia artificial aplicada al ámbito legal (Legaltech).
+                            </p>
+                            <p>
+                                Fundador de Voticky Legal & Consulting, donde asesora integralmente a empresas innovadoras, desde su estructuración corporativa y regulatoria hasta la gestión de crisis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Sección Experiencia (Clientes de la propuesta Skipo) ===== -->
+        <section id="experiencia" class="py-24 bg-brand-becker">
+            <div class="max-w-6xl mx-auto px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-white text-center mb-16">
+                    Experiencia Estratégica
+                </h2>
+                <!-- Grilla de Logos de Clientes -->
+                <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-10 md:gap-x-20">
+                    <!-- Skipo -->
+                    <img src="assets/skipo-logo-dark.svg" alt="Logo Skipo" class="h-10 object-contain">
+                    <!-- Con Carnet -->
+                    <img src="assets/con-carnet-logo.webp" alt="Logo Con Carnet" class="h-12 object-contain">
+                    <!-- Kamaleont -->
+                    <img src="assets/kamaleont-logo.png" alt="Logo Kamaleont" class="h-12 object-contain">
+                    <!-- Catarsis -->
+                    <img src="assets/catarsis-logo.png" alt="Logo Catarsis" class="h-10 object-contain">
+                    <!-- C-Store -->
+                    <img src="assets/c-store-logo.png" alt="Logo C-Store" class="h-10 object-contain">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Footer y Contacto ===== -->
+        <footer id="contacto" class="bg-brand-midnight text-brand-brook">
+            <div class="max-w-6xl mx-auto px-6 lg:px-8 py-20">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <!-- Logo e Info -->
+                    <div class="md:col-span-1">
+                        <!-- Logo (versión blanca, enlazada desde 'assets') -->
+                        <img class="h-16 mb-4" src="assets/logo-blanco.png" alt="Voticky Legal & Consulting">
+                        <p class="text-sm opacity-80 max-w-xs">
+                            Asesoría legal-regulatoria y de negocios para Fintech y organizaciones innovadoras.
+                        </p>
+                    </div>
+
+                    <!-- Links Rápidos -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-white mb-4">Navegación</h4>
+                        <ul class="space-y-3">
+                            <li><a href="#servicios" class="opacity-80 hover:opacity-100 hover:text-white transition-colors">Servicios</a></li>
+                            <li><a href="#fundador" class="opacity-80 hover:opacity-100 hover:text-white transition-colors">Fundador</a></li>
+                            <li><a href="#experiencia" class="opacity-80 hover:opacity-100 hover:text-white transition-colors">Experiencia</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contacto -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-white mb-4">Conversemos</h4>
+                        <p class="opacity-80 mb-4">
+                            Estamos listos para ayudarte a navegar la complejidad legal y tecnológica.
+                        </p>
+                        <a href="mailto:voticky.eugenio@gmail.com" class="font-medium text-white hover:text-brand-brook transition-colors">
+                            voticky.eugenio@gmail.com
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Barra inferior de Copyright -->
+                <div class="mt-16 pt-8 border-t border-brand-becker/30 text-center">
+                    <p class="text-sm opacity-70">
+                        © 2025 Voticky Legal & Consulting. Todos los derechos reservados.
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Script para el menú móvil -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
