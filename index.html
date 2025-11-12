@@ -81,33 +81,66 @@
         </div>
     </header>
 
-    <!-- ===== Sección Principal (Hero con Video) ===== -->
-    <main>
-        <section id="inicio" class="relative h-screen flex items-center justify-center text-white">
-            <!-- Video de Fondo -->
-            <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
-                <source src="assets/logo-video.mp4" type="video/mp4">
-                Tu navegador no soporta videos HTML5.
-            </video>
+    <!-- ===== Hero Slider ===== -->
+<main>
+    <section id="inicio" class="relative h-screen w-full overflow-hidden">
+        <!-- Slides Container -->
+        <div id="slider" class="relative h-full w-full flex transition-transform duration-700 ease-in-out" style="transform: translateX(0%);">
             
-            <!-- Capa de Oscurecimiento -->
-            <div class="absolute top-0 left-0 w-full h-full bg-black/50 z-10"></div>
-
-            <!-- Contenido de la Sección -->
-            <div class="relative z-20 max-w-6xl mx-auto px-6 lg:px-8 text-center">
-                <!-- Título (Misión del Business Plan) -->
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                    Aliado estratégico en cumplimiento legal y gobierno corporativo.
-                </h1>
-                <!-- Subtítulo (Descripción del Negocio) -->
-                <p class="text-xl md:text-2xl text-brand-brook max-w-3xl mx-auto">
-                    Expertos en asesoría legal-regulatoria y de negocios para Fintech, con un enfoque en riesgos, cumplimiento e Inteligencia Artificial.
-                </p>
-                <a href="#servicios" class="mt-10 inline-block bg-brand-becker text-white px-8 py-3.5 rounded-lg text-lg font-medium hover:bg-opacity-90 transition-colors shadow-lg">
-                    Conocer los Servicios
-                </a>
+            <!-- Slide 1: Fintech y Regulación -->
+            <div class="slide relative h-full w-full flex-shrink-0">
+                <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+                    <source src="assets/hero-video-1.mp4" type="video/mp4">
+                    Tu navegador no soporta videos HTML5.
+                </video>
+                <div class="absolute top-0 left-0 w-full h-full bg-black/60 z-10"></div>
+                <div class="relative z-20 flex flex-col items-center justify-center h-full text-center text-white max-w-4xl mx-auto px-6">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">Navegación Regulatoria Estratégica</h1>
+                    <p class="text-lg md:text-xl text-brand-brook">Simplificamos la complejidad de la Ley Fintech, CMF y cumplimiento (PLAFT) para que tu negocio despegue con seguridad.</p>
+                </div>
             </div>
-        </section>
+
+            <!-- Slide 2: IA y Legaltech -->
+            <div class="slide relative h-full w-full flex-shrink-0">
+                <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+                    <source src="assets/hero-video-2.mp4" type="video/mp4">
+                    Tu navegador no soporta videos HTML5.
+                </video>
+                <div class="absolute top-0 left-0 w-full h-full bg-black/60 z-10"></div>
+                <div class="relative z-20 flex flex-col items-center justify-center h-full text-center text-white max-w-4xl mx-auto px-6">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">Innovación Legal con Inteligencia Artificial</h1>
+                    <p class="text-lg md:text-xl text-brand-brook">Integramos IA y Legaltech para automatizar procesos, optimizar el cumplimiento y convertir tus datos en una ventaja estratégica.</p>
+                </div>
+            </div>
+
+            <!-- Slide 3: Web3 y Activos Digitales -->
+            <div class="slide relative h-full w-full flex-shrink-0">
+                <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+                    <source src="assets/hero-video-3.mp4" type="video/mp4">
+                    Tu navegador no soporta videos HTML5.
+                </video>
+                <div class="absolute top-0 left-0 w-full h-full bg-black/60 z-10"></div>
+                <div class="relative z-20 flex flex-col items-center justify-center h-full text-center text-white max-w-4xl mx-auto px-6">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">Asesoría en Criptoactivos y Tokenización</h1>
+                    <p class="text-lg md:text-xl text-brand-brook">Desde la estructuración legal de proyectos Web3 hasta la tokenización de activos, te damos la seguridad jurídica para innovar en la nueva economía digital.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Controles de Navegación -->
+        <button id="prevBtn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/20 text-white p-3 rounded-full z-30 hover:bg-white/40 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+        </button>
+        <button id="nextBtn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/20 text-white p-3 rounded-full z-30 hover:bg-white/40 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </button>
+
+        <!-- Indicadores de Posición -->
+        <div id="indicators" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-30">
+            <!-- Los indicadores se generarán con JS -->
+        </div>
+    </section>
 
         <!-- ===== Sección Servicios (del Business Plan) ===== -->
         <section id="servicios" class="py-24 bg-brand-brook/20">
@@ -258,6 +291,85 @@
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
     </script>
+
+<!-- Script para el Hero Slider -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const slider = document.getElementById('slider');
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const indicatorsContainer = document.getElementById('indicators');
+        
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+
+        // Crear indicadores
+        for (let i = 0; i < totalSlides; i++) {
+            const indicator = document.createElement('button');
+            indicator.classList.add('w-3', 'h-3', 'rounded-full', 'transition-colors');
+            indicator.dataset.index = i;
+            indicatorsContainer.appendChild(indicator);
+        }
+        const indicators = document.querySelectorAll('#indicators button');
+
+        function updateSlider() {
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            
+            // Actualizar videos
+            slides.forEach((slide, index) => {
+                const video = slide.querySelector('video');
+                if (index === currentIndex) {
+                    video.play().catch(error => console.log("Video play was prevented:", error));
+                } else {
+                    video.pause();
+                }
+            });
+
+            // Actualizar indicadores
+            indicators.forEach((indicator, index) => {
+                if (index === currentIndex) {
+                    indicator.classList.add('bg-white');
+                    indicator.classList.remove('bg-white/50');
+                } else {
+                    indicator.classList.add('bg-white/50');
+                    indicator.classList.remove('bg-white');
+                }
+            });
+        }
+
+        function goToNext() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSlider();
+        }
+
+        function goToPrev() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        }
+
+        // Event Listeners
+        nextBtn.addEventListener('click', goToNext);
+        prevBtn.addEventListener('click', goToPrev);
+
+        indicators.forEach(indicator => {
+            indicator.addEventListener('click', (e) => {
+                currentIndex = parseInt(e.target.dataset.index);
+                updateSlider();
+            });
+        });
+
+        // Auto-play
+        let slideInterval = setInterval(goToNext, 8000); // Cambia de slide cada 8 segundos
+
+        // Pausar en hover (opcional)
+        slider.addEventListener('mouseenter', () => clearInterval(slideInterval));
+        slider.addEventListener('mouseleave', () => slideInterval = setInterval(goToNext, 8000));
+
+        // Inicializar
+        updateSlider();
+    });
+</script>
 
 </body>
 </html>
